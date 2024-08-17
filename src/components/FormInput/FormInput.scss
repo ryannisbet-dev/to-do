@@ -1,0 +1,32 @@
+@import '../../common.scss';
+
+.form {
+    &__wrap {
+        align-items: center;
+        background-color: var(--secondary-background);
+        border-radius: 10px;
+        display: flex;
+        padding: 1rem;
+    }
+
+    &__input {
+        background-color: var(--secondary-background);
+        border: 0;
+        color: var(--font-color);
+        flex-grow: 1;
+        font-size: 1rem;
+        outline: 0;
+        padding-inline: .5rem;
+    }
+
+    &__btn {
+        background-image: $gradient;
+        border-radius: 50%;
+        border: 0;
+        color: $white;
+        font-size: 1.25rem;
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+    }
+}

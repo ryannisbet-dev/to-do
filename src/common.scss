@@ -1,0 +1,41 @@
+$light-blue: #55DDFF;
+$purple: #C058F3;
+$white: #fff;
+
+$gradient: linear-gradient(135deg, $light-blue, $purple);
+
+:root {
+    --primary-background: #fff;
+    --secondary-background: #fff;
+    --font-color: #494C6B;
+    --secondary-color: #3A7CFD;
+    --border-color: #9da0bc;
+    --header-image: url("./assets/bg-mobile-light.jpg");
+}
+
+.dark-mode {
+    --primary-background: #171823;
+    --secondary-background: #393A4B;
+    --font-color: #fff;
+    --border-color: #666;
+    --header-image: url("./assets/bg-mobile-dark.jpg");
+}
+
+.pageContainer {
+    background-color: var(--primary-background);
+    font-family: "Josefin Sans", sans-serif;
+    min-height: 100vh;
+}
+
+
+@media (min-width: 768px) {
+    :root {
+        --header-image: url("./assets/bg-desktop-light.jpg");
+    }
+
+    .dark-mode {
+        --header-image: url("./assets/bg-desktop-dark.jpg");
+    }
+}
+  
+  

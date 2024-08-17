@@ -1,0 +1,133 @@
+@import '../../common.scss';
+
+.todo {
+    margin: 0;
+    padding: 0;
+    &__container,
+    &__actions {
+        background-color: var(--secondary-background);
+        border-radius: 5px;
+        box-shadow: 0 7px 4px rgba(0, 0, 0, 0.2);
+        margin-block-start: -2rem;
+        margin-inline: 1rem;
+    }
+
+    &__item {
+        align-items: center;
+        border-bottom: var(--border-color) 1px solid;
+        color: var(--font-color);
+        display: flex;
+        list-style: none;
+        padding: .5rem;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: space-around;
+        margin-block-start: 2rem;
+        padding: 1rem;        
+    }
+}
+
+.item {
+    &__checkbox {
+        appearance: none;
+        aspect-ratio: 1/1;
+        border: 1px solid var(--border-color);
+        border-radius: 50%;
+        cursor: pointer;
+        margin-inline-end: 1rem;
+        min-width: 25px;
+        position: relative;
+        width: 25px;
+        
+        &:checked {
+            background-image: $gradient;
+            border: 0;
+        }
+
+        &:checked::before {
+            border-radius: 50%;
+            color: $white;
+            content: "\e876";
+            font-family: "Material Icons";
+            font-size: 15px;
+            height: 15px;
+            left: 50%;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.2s ease-in-out;
+            width: 15px;
+        }
+
+        &:checked::before {
+            opacity: 1;
+        }
+    }
+
+    &__name {
+        flex-grow: 1;
+    }
+
+    &__close {
+        background-color: transparent;
+        border: 0;
+        color: var(--font-color);
+        cursor: pointer;
+        padding: 1rem;
+    }
+
+    &__actions {
+        color: var(--font-color);
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    &__clear {
+        background-color: transparent;
+        border: 0;
+        color: var(--font-color);
+        font-size: 1rem;
+    }
+}
+
+.action {
+    &__btn {
+        background-color: transparent;
+        border: 0;
+        color: var(--font-color);
+        cursor: pointer;
+        font-size: 1rem;
+
+        &:hover {
+            color: var(--secondary-color);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .todo {
+        &__container,
+        &__actions  {
+            margin-inline: 8rem;
+        }
+        
+    }
+}
+
+@media (min-width: 1200px) {
+    .todo {
+        &__container,
+        &__actions  {
+            margin-inline: 15rem;
+        }
+
+        &__item {
+            padding-inline: 1rem;
+        }
+    }
+    
+}

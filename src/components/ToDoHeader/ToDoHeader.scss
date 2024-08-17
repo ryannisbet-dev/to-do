@@ -1,0 +1,44 @@
+@import '../../common.scss';
+
+.header {
+    background-image: var(--header-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $white;
+    padding: 1rem;
+    padding-block-end: 3rem;
+    
+    &__text {
+        align-items: center;
+        display: flex;
+        font-size: 1.25rem;
+        justify-content: space-between;
+        letter-spacing: .5rem;
+        text-transform: uppercase;
+    }
+
+    &__switch {
+        background-color: transparent;
+        border: 0;
+        color: $white;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding-inline: 8rem;
+    }
+
+    .dark-mode {
+        .header {
+            background-image: url("../../assets/bg-desktop-dark.jpg");
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .header {
+        padding-inline: 15rem;
+    }
+}
